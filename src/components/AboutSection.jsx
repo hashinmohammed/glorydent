@@ -2,7 +2,7 @@ import ContentSection from "./ContentSection";
 
 const AboutSection = () => {
     return (
-      <div className="bg-white">
+      <div id="about" className="bg-white">
         {/* About Us Section */}
         <ContentSection
           tag="ABOUT US"

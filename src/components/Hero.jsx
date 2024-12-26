@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-
-
-  
-
+import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production';
 //   import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
@@ -148,12 +144,18 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <button className="w-full sm:w-auto bg-red-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-red-700 transition-colors text-sm sm:text-base">
+                <a href='tel:7034391699'>
+                <button  className="w-full sm:w-auto bg-red-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-red-700 transition-colors text-sm sm:text-base">
                 Book an Appointment
               </button>
+                </a>
+             
+                <a href="#services">
               <button className="w-full sm:w-auto border border-red-600 text-red-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-red-50 transition-colors text-sm sm:text-base">
+
                 Browse our service
               </button>
+                </a>
             </div>
           </div>
 

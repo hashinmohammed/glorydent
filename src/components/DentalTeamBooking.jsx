@@ -78,13 +78,13 @@ const DentalTeamBooking = () => {
           </div>
 
           {/* Contact Methods */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div id='contact' className="grid md:grid-cols-3 gap-8 mb-12">
             <ContactMethod
               icon={<Phone className="w-6 h-6 text-red-600" />}
               title="Give us a call"
               description="Lorem ipsum dolor sit amet, ut adipisim pellentesque"
-              contact="(12) 345-67890"
-              link="tel:(12)345-67890"
+              contact="703 439 1699"
+              link="tel:7034391699"
             />
             <ContactMethod
               icon={<Mail className="w-6 h-6 text-red-600" />}
