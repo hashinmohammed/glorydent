@@ -8,6 +8,11 @@ import happyFamily from "../assets/happy.png";
 import happyFamily2 from "../assets/happy2.png";
 import happyFamily3 from "../assets/happy3.png";
 import happyFamily4 from "../assets/happy4.png";
+import general from "../assets/general.png";
+import dental from "../assets/dental.png";
+import emergency from "../assets/emergency.png";
+
+
 
 const DentalServices = () => {
   useEffect(() => {
@@ -27,7 +32,7 @@ const DentalServices = () => {
   const services = [
     {
       title: "General Dentistry",
-      image: "src/assets/general.png",
+      image: general,
       description:
         "Our general dentistry services include a range of preventative and targeted treatments essential for maintaining healthy teeth and gums.",
       tags: [
@@ -42,14 +47,14 @@ const DentalServices = () => {
     },
     {
       title: "Dental Cosmetic",
-      image: "src/assets/dental.png",
+      image:dental,
       description:
         "We know the first thing people notice about you is your smile. We deliver incredible cosmetic results that will have you smiling with confidence.",
       tags: ["Teeth whitening", "Crowns", "Veneers", "Implants", "Invisalign"],
     },
     {
       title: "Emergency Care",
-      image: "src/assets/emergency.png",
+      image: emergency,
       description:
         "We provides emergency dental services if you have knocked out a tooth or are experiencing a severe toothache, do not delay seeking medical treatment.",
       tags: [

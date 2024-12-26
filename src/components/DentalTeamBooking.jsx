@@ -1,6 +1,9 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
 import DentistCard from './DentistCard';
 import ContactMethod from './ContactMethod';
+import expert1 from '../assets/expert1.png'
+import expert2 from '../assets/expert2.png'
+import expert3 from '../assets/expert3.png'
 
 const DentalTeamBooking = () => {
     const dentists = [
@@ -8,20 +11,20 @@ const DentalTeamBooking = () => {
       name: "Maria",
       designation: "BDS (GENERAL DENTIST)",
       description: "Quisque sed ex sed risus pellentesque pellentesque id nec purusestibulum",
-      image: "src/assets/expert1.png"
+      image: expert1
     },
     {
       name: "Darla",
       designation: "BDS (GENERAL DENTIST)",
       description: "Quisque sed ex sed risus pellentesque pellentesque id nec purusestibulum",
-      image: "src/assets/expert2.png"
+      image:expert2
 
     },
     {
       name: "Josh",
       designation: "BDS (GENERAL DENTIST)",
       description: "Quisque sed ex sed risus pellentesque pellentesque id nec purusestibulum",
-      image: "src/assets/expert3.png"
+      image:expert3
 
     }
   ];

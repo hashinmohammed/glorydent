@@ -1,4 +1,6 @@
 import ContentSection from "./ContentSection";
+import smile from '../assets/smile.png'
+import smile2 from '../assets/smile2.png'
 
 const AboutSection = () => {
     return (
@@ -9,7 +11,7 @@ const AboutSection = () => {
           title="Your smile is our pride"
           description="We know the first thing people notice about you is smile, our expertise and experience, combined with technologies. We will ensure you have healthy, beautiful smiles"
           longDescription="Sed sollicitudin pellentesque urna, a suscipit metus imperdiet et. Curabitur consectetur auctor leo eu posuere. Fusce maximus purus ac enim tempor, eu consequat purus laoreet. Suspendisse elementum ligula vitae gravida aliquet."
-          imageUrl="src/assets/smile.png"
+          imageUrl={smile}
         />
   
         {/* Decorative Curve */}
@@ -34,7 +36,7 @@ const AboutSection = () => {
           title="We accept new patients"
           description="We are highly skilled in treating a wide range of dental concerns, and take pride in delivering outstanding patient care and exceptional results every time."
           longDescription="Sed sollicitudin pellentesque urna, a suscipit metus imperdiet et. Curabitur consectetur auctor leo eu posuere. Fusce maximus purus ac enim tempor, eu consequat purus laoreet. Suspendisse elementum ligula vitae gravida aliquet."
-          imageUrl="src/assets/smile2.png"
+          imageUrl={smile2}
 
           isReversed={true}
         />

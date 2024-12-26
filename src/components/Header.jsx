@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { MapPin, Clock, Phone, Menu, X } from 'lucide-react';
-
+import logo from '../assets/logo.jpg'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -62,7 +62,7 @@ const Header = () => {
 
             <div className="flex items-center">
               <div className="w-12 h-12">
-                <img src="src/assets/logo.JPG" alt="GLORYDENT logo" />
+                <img src={logo} alt="GLORYDENT logo" />
               </div>
               <div className="ml-3">
                 <h1 className="text-xl font-bold text-gray-800">GLORYDENT</h1>

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production';
 //   import React, { useState, useEffect } from 'react';
+import image from '../assets/Image.png'
+import image2 from '../assets/Image2.jpg'
+import image3 from '../assets/Image3.jpg'
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,17 +14,17 @@ const Hero = () => {
     {
       title: "GLORYDENT DENTAL CARE",
       heading: "Local dentists who love to make you smile.",
-      image: "src/assets/Image.png"
+      image:image
     },
     {
       title: "PROFESSIONAL DENTAL SERVICES",
       heading: "Advanced care for your entire family.",
-      image: "src/assets/image2.jpg"
+      image:image2
     },
     {
       title: "COMFORTABLE ENVIRONMENT",
       heading: "Modern facility with a gentle touch.",
-      image: "src/assets/image3.jpg"
+      image:image3
     }
   ];
 
