@@ -1,254 +1,190 @@
-import React, { useState, useEffect } from 'react';
-import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production';
-//   import React, { useState, useEffect } from 'react';
-import image from '../assets/Image.png'
-import image2 from '../assets/Image2.jpg'
-import image3 from '../assets/Image3.jpg'
+import { m } from "framer-motion";
+import { Clock, MapPin, Phone, ShieldCheck, Smile } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
+import heroImage from "../assets/Image.webp";
+import familyImage from "../assets/image2.webp";
+import { CLINIC } from "../data/site";
+
+const ease = [0.22, 1, 0.36, 1];
+
+const rise = (delay) => ({
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.9, delay, ease },
+});
 
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [animating, setAnimating] = useState(false);
-
-  const slides = [
-    {
-      title: "GLORYDENT DENTAL CARE",
-      heading: "Local dentists who love to make you smile.",
-      image:image
-    },
-    {
-      title: "PROFESSIONAL DENTAL SERVICES",
-      heading: "Advanced care for your entire family.",
-      image:image2
-    },
-    {
-      title: "COMFORTABLE ENVIRONMENT",
-      heading: "Modern facility with a gentle touch.",
-      image:image3
-    }
-  ];
-
-  useEffect(() => {
-    let interval;
-    if (isAutoPlaying && !animating) {
-      interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
-      }, 3000);
-    }
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, animating, slides.length]);
-
-  const handleMouseEnter = () => setIsAutoPlaying(false);
-  const handleMouseLeave = () => setIsAutoPlaying(true);
-
-  const features = [
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-12 md:h-12">
-          <path
-            fill="currentColor"
-            d="M12 2a4 4 0 0 1 4 4v2h2.5A2.5 2.5 0 0 1 21 10.5v8a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-8A2.5 2.5 0 0 1 5.5 8H8V6a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2v2h4V6a2 2 0 0 0-2-2"
-          />
-        </svg>
-      ),
-      title: "Preventive Guidance",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit velit, sapien habitant integer sen.facilisis ex non nibh"
-    },
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-12 md:h-12">
-          <path
-            fill="currentColor"
-            d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32 0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2M1 21h4V9H1v12z"
-          />
-        </svg>
-      ),
-      title: "Friendly Service",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit velit, sapien habitant integer sen.facilisis ex non nibh"
-    },
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-12 md:h-12">
-          <path
-            fill="currentColor"
-            d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
-          />
-        </svg>
-      ),
-      title: "Dental Technology",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit velit, sapien habitant integer sen.facilisis ex non nibh"
-    }
-  ];
-
-  const nextSlide = () => {
-    if (animating) return;
-    setAnimating(true);
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => {
-      setAnimating(false);
-      setIsAutoPlaying(true);
-    }, 500);
-  };
-
-  const prevSlide = () => {
-    if (animating) return;
-    setAnimating(true);
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => {
-      setAnimating(false);
-      setIsAutoPlaying(true);
-    }, 500);
-  };
-
   return (
-    <div className="w-full bg-white overflow-hidden">
-      <div 
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20 relative"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+    <section id="home" className="relative overflow-hidden bg-brand-cream">
+      {/* Ribbon echoing the logo, drawn in on load */}
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-40 top-0 h-full w-[900px] opacity-[0.14] lg:right-0"
+        viewBox="0 0 900 800"
+        fill="none"
       >
-        <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 items-center">
-          {/* Left Content */}
-          <div className="space-y-4 sm:space-y-6 lg:pr-6 xl:pr-12">
-            <div className="relative h-8">
-              {slides.map((slide, index) => (
-                <h2
-                  key={index}
-                  className={`text-red-600 font-medium uppercase tracking-wide text-sm sm:text-base absolute w-full transition-all duration-500 ${
-                    currentSlide === index
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 -translate-y-4'
-                  }`}
-                >
-                  {slide.title}
-                </h2>
-              ))}
-            </div>
-            
-            <div className="relative h-32 sm:h-36 lg:h-18">
-              {slides.map((slide, index) => (
-                <h1
-                  key={index}
-                  className={`text-3xl sm:text-4xl lg:text-5xl font-serif text-gray-900 leading-tight absolute w-full transition-all duration-500 ${
-                    currentSlide === index
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-8'
-                  }`}
-                >
-                  {slide.heading}
-                </h1>
-              ))}
-            </div>
+        <m.path
+          d="M40 120 C 260 -20, 520 60, 600 240 S 860 520, 700 700 S 300 760, 260 560"
+          stroke="#E31E24"
+          strokeWidth="70"
+          strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2.4, ease }}
+        />
+      </svg>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-brand/10 blur-3xl"
+      />
 
-            <p className="text-base sm:text-lg text-gray-600 relative">
-              Discover a level of dental care like no other
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a href='tel:7034391699'>
-                <button  className="w-full sm:w-auto bg-red-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-red-700 transition-colors text-sm sm:text-base">
-                Book an Appointment
-              </button>
-                </a>
-             
-                <a href="#services">
-              <button className="w-full sm:w-auto border border-red-600 text-red-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-red-50 transition-colors text-sm sm:text-base">
+      <div className="container-x relative grid items-center gap-14 pb-20 pt-12 sm:pt-16 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pb-28 lg:pt-20">
+        <div>
+          <m.span {...rise(0.05)} className="eyebrow">
+            Dentist &amp; orthodontist in Karinkallathani
+          </m.span>
 
-                Browse our service
-              </button>
-                </a>
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="relative mt-6 lg:mt-0">
-            <div className="relative rounded-lg overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3]">
-              {slides.map((slide, index) => (
-                <div
-                  key={index}
-                  className={`absolute w-full h-full transition-all duration-500 ${
-                    currentSlide === index
-                      ? 'opacity-100 translate-x-0'
-                      : 'opacity-0 translate-x-full'
-                  }`}
-                >
-                  <img
-                    src={slide.image}
-                    alt={`Slide ${index + 1}`}
-                    className="w-full h-full object-cover border-2 p-1 rounded-lg border-l-red-100 border-r-red-100 border-t-red-100"
-                  />
-                </div>
-              ))}
-              <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-white to-transparent" />
-            </div>
-            <div className="absolute -bottom-6 -left-6 w-16 h-16 sm:w-24 sm:h-24 text-red-600">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <path
-                  d="M0,50 Q25,0 50,50 T100,50"
-                  fill="none"
+          <m.h1
+            {...rise(0.15)}
+            className="mt-6 font-display text-[2.6rem] font-medium leading-[1.02] tracking-tight sm:text-6xl lg:text-[4.4rem]"
+          >
+            Smiles, cared for{" "}
+            <span className="relative inline-block italic text-brand">
+              with heart.
+              <svg
+                aria-hidden="true"
+                className="absolute -bottom-3 left-0 w-full"
+                viewBox="0 0 300 20"
+                preserveAspectRatio="none"
+              >
+                <m.path
+                  d="M4 14 C 80 2, 200 2, 296 12"
                   stroke="currentColor"
                   strokeWidth="4"
+                  strokeLinecap="round"
+                  fill="none"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1.1, delay: 0.9, ease }}
                 />
               </svg>
-            </div>
-          </div>
+            </span>
+          </m.h1>
+
+          <m.p {...rise(0.3)} className="mt-8 max-w-xl text-lg leading-relaxed text-brand-ink/70">
+            Gentle, unhurried dentistry and orthodontics for the whole family. From your child&apos;s
+            first check-up to braces, aligners and a confident new smile.
+          </m.p>
+
+          <m.div {...rise(0.42)} className="mt-9 grid gap-3 sm:flex sm:flex-wrap sm:items-center">
+            <a href={CLINIC.phoneHref} className="btn-primary sm:min-w-[11rem]">
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              Call to book
+            </a>
+            <a
+              href={CLINIC.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-brand-ink shadow-sm ring-1 ring-brand-ink/10 transition hover:-translate-y-0.5 hover:shadow-md hover:ring-[#25D366]/40 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/30 sm:min-w-[11rem]"
+            >
+              <WhatsAppIcon className="h-[18px] w-[18px] text-[#25D366]" />
+              WhatsApp us
+            </a>
+          </m.div>
+
+          <m.ul
+            {...rise(0.55)}
+            className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-brand-ink/60"
+          >
+            <li className="flex items-center gap-2">
+              <Clock className="h-4 w-4 text-brand" aria-hidden="true" />
+              Open {CLINIC.hours}
+            </li>
+            <li aria-hidden="true" className="h-1 w-1 rounded-full bg-brand-ink/25" />
+            <li className="flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-brand" aria-hidden="true" />
+              Karinkallathani, Kerala
+            </li>
+          </m.ul>
         </div>
 
-        {/* Slider Controls */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-3 sm:gap-4">
-          <button
-            onClick={prevSlide}
-            disabled={animating}
-            className="p-1.5 sm:p-2 rounded-full bg-red-600 text-white hover:bg-red-700 transition-colors disabled:opacity-50"
+        <div className="relative mx-auto w-full max-w-[520px]">
+          <m.div
+            initial={{ scale: 0.94, y: 40 }}
+            animate={{ scale: 1, y: 0 }}
+            transition={{ duration: 1.1, delay: 0.2, ease }}
+            className="relative aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-[2.5rem] bg-brand-blush shadow-[0_40px_80px_-30px_rgba(173,14,21,0.45)]"
           >
-            <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-6 sm:h-6">
-              <path
-                fill="currentColor"
-                d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-              />
-            </svg>
-          </button>
-          <div className="flex gap-1.5 sm:gap-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  if (!animating) {
-                    setAnimating(true);
-                    setCurrentSlide(index);
-                    setIsAutoPlaying(false);
-                    setTimeout(() => {
-                      setAnimating(false);
-                      setIsAutoPlaying(true);
-                    }, 500);
-                  }
-                }}
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                  currentSlide === index ? 'bg-red-600 scale-110' : 'bg-gray-300'
-                }`}
-              />
-            ))}
-          </div>
-          <button
-            onClick={nextSlide}
-            disabled={animating}
-            className="p-1.5 sm:p-2 rounded-full bg-red-600 text-white hover:bg-red-700 transition-colors disabled:opacity-50"
+            <img
+              src={heroImage}
+              alt="Smiling patient relaxing after her dental visit"
+              width="703"
+              height="700"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/25 via-transparent to-transparent" />
+          </m.div>
+
+          <m.div
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.7, ease }}
+            className="absolute -bottom-6 -left-4 h-32 w-32 overflow-hidden rounded-full border-[6px] border-brand-cream shadow-xl sm:-left-10 sm:h-40 sm:w-40"
           >
-            <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-6 sm:h-6">
-              <path
-                fill="currentColor"
-                d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"
-              />
-            </svg>
-          </button>
+            <img
+              src={familyImage}
+              alt="Mother and daughter brushing their teeth together"
+              width="1400"
+              height="935"
+              className="h-full w-full object-cover"
+              decoding="async"
+            />
+          </m.div>
+
+          <m.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.9, ease }}
+            className="absolute -right-2 top-10 sm:-right-8"
+          >
+            <m.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="flex items-center gap-3 rounded-2xl bg-white/95 p-3 pr-5 shadow-xl backdrop-blur"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand text-white">
+                <Smile className="h-5 w-5" />
+              </span>
+              <span className="text-sm leading-tight">
+                <span className="block font-semibold">Braces &amp; aligners</span>
+                <span className="text-brand-ink/55">Orthodontic care</span>
+              </span>
+            </m.div>
+          </m.div>
+
+          <m.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1.1, ease }}
+            className="absolute -right-2 bottom-16 sm:-right-6"
+          >
+            <m.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="flex items-center gap-3 rounded-2xl bg-brand-ink p-3 pr-5 text-white shadow-xl"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-brand">
+                <ShieldCheck className="h-5 w-5" />
+              </span>
+              <span className="text-sm leading-tight">
+                <span className="block font-semibold">Sterile &amp; safe</span>
+                <span className="text-white/60">Every instrument, every time</span>
+              </span>
+            </m.div>
+          </m.div>
         </div>
       </div>
-
-      {/* Features Section */}
-      {/* ... Features section remains the same ... */}
-    </div>
+    </section>
   );
 };
 

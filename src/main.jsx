@@ -1,15 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
+import { createRoot, hydrateRoot } from "react-dom/client";
+import "./index.css";
+import Root from "./Root.jsx";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-      <BrowserRouter>
+const container = document.getElementById("root");
 
-    <App />
-    </BrowserRouter>
-
-  </StrictMode>,
-)
+// Production HTML is pre-rendered at build time (scripts/prerender.js); in dev it is empty.
+if (container.firstElementChild) {
+  hydrateRoot(container, <Root />);
+} else {
+  createRoot(container).render(<Root />);
+}

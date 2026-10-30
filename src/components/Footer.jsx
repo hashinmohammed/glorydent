@@ -1,56 +1,65 @@
-import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import logo from "../assets/logo.webp";
+import { CLINIC, NAV_LINKS } from "../data/site";
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-red-700 text-white py-4 px-4 md:px-6">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <div className="text-sm text-center md:text-left">
-          © {currentYear} GLORYDENT Dental Care. All rights reserved.
+const Footer = () => (
+  <footer className="bg-brand-ink pb-28 pt-16 text-white/70 sm:pb-10">
+    <div className="container-x">
+      <div className="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div>
+          <a href="#home" className="inline-flex items-center gap-3">
+            <img src={logo} alt="" width="48" height="49" loading="lazy" className="h-12 w-12 rounded-xl bg-white object-contain p-1" />
+            <span className="font-display text-2xl text-white">
+              Glory<span className="text-brand">Dent</span>
+            </span>
+          </a>
+          <p className="mt-4 max-w-sm text-sm leading-relaxed">
+            {CLINIC.tagline}. Gentle, modern dental care for the whole family in Karinkallathani.
+          </p>
         </div>
-        
-        <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
-          <a 
-            href="#" 
-            className="hover:text-gray-200 transition-colors transform hover:scale-110 duration-200"
-            aria-label="Facebook"
-          >
-            <Facebook size={20} />
-          </a>
-          <a 
-            href="#" 
-            className="hover:text-gray-200 transition-colors transform hover:scale-110 duration-200"
-            aria-label="Twitter"
-          >
-            <Twitter size={20} />
-          </a>
-          <a 
-            href="#" 
-            className="hover:text-gray-200 transition-colors transform hover:scale-110 duration-200"
-            aria-label="Instagram"
-          >
-            <Instagram size={20} />
-          </a>
-          <a 
-            href="#" 
-            className="hover:text-gray-200 transition-colors transform hover:scale-110 duration-200"
-            aria-label="LinkedIn"
-          >
-            <Linkedin size={20} />
-          </a>
-          <a 
-            href="#" 
-            className="hover:text-gray-200 transition-colors transform hover:scale-110 duration-200"
-            aria-label="YouTube"
-          >
-            <Youtube size={20} />
-          </a>
+
+        <nav aria-label="Footer">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white">Explore</p>
+          <ul className="mt-4 space-y-2.5 text-sm">
+            {NAV_LINKS.map((l) => (
+              <li key={l.href}>
+                <a href={l.href} className="transition hover:text-brand">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white">Contact</p>
+          <address className="not-italic">
+            <ul className="mt-4 space-y-2.5 text-sm">
+              <li>
+                <a href={CLINIC.phoneHref} className="transition hover:text-brand">
+                  {CLINIC.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a href={CLINIC.whatsappHref} target="_blank" rel="noopener noreferrer" className="transition hover:text-brand">
+                  WhatsApp {CLINIC.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a href={CLINIC.mapsUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-brand">
+                  {CLINIC.address}
+                </a>
+              </li>
+              <li>{CLINIC.hours}</li>
+            </ul>
+          </address>
         </div>
       </div>
-    </footer>
-  );
-};
+
+      <p className="pt-8 text-xs text-white/45">
+        © <span suppressHydrationWarning>{new Date().getFullYear()}</span> GloryDent Dental Care. All rights reserved.
+      </p>
+    </div>
+  </footer>
+);
 
 export default Footer;

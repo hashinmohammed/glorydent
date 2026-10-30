@@ -1,24 +1,31 @@
-import AboutSection from "./components/AboutSection"
-import DentalTeamBooking from "./components/DentalTeamBooking"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-// import ServiceCard from "./components/DentalServices"
-import DentalServices from "./components/DentalServices"
-
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Marquee from "./components/Marquee";
+import Treatments from "./components/Treatments";
+import WhyUs from "./components/WhyUs";
+import Spotlight from "./components/Spotlight";
+import VisitSteps from "./components/VisitSteps";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import MobileCallBar from "./components/MobileCallBar";
 
 function App() {
-
   return (
     <>
-<Header />
-<Hero/>
-<DentalServices />
-<AboutSection />
-<DentalTeamBooking />
-<Footer />
+      <Navbar />
+      <main id="main">
+        <Hero />
+        <Marquee />
+        <Treatments />
+        <WhyUs />
+        <Spotlight />
+        <VisitSteps />
+        <Contact />
+      </main>
+      <Footer />
+      <MobileCallBar />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
