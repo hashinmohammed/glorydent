@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://glorydent.com/sitemap.xml
+Sitemap: https://glorydent.netlify.app/sitemap.xml
