@@ -18,7 +18,7 @@ const MobileCallBar = () => {
           animate={{ y: 0 }}
           exit={{ y: 100 }}
           transition={{ type: "spring", damping: 26, stiffness: 260 }}
-          className="fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-40 flex gap-2 rounded-full bg-white/95 p-2 shadow-[0_10px_40px_-10px_rgba(22,36,15,0.45)] backdrop-blur sm:hidden"
+          className="fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-40 flex gap-2 rounded-full bg-white p-2 shadow-[0_10px_40px_-10px_rgba(22,36,15,0.45)] sm:hidden"
         >
           <a href={CLINIC.phoneHref} className="btn-primary flex-1 !py-3">
             <Phone className="h-4 w-4" aria-hidden="true" />

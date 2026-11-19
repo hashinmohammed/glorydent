@@ -55,9 +55,13 @@
   .swipe-row::-webkit-scrollbar {
     display: none;
   }
+  /* Cards off to the right would otherwise play their rise-in while being swiped into view;
+     !important beats the inline styles Framer Motion sets. */
   .swipe-item {
     flex: 0 0 84%;
     scroll-snap-align: start;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
