@@ -32,7 +32,19 @@
     @apply font-display text-3xl font-medium leading-[1.08] tracking-tight sm:text-4xl lg:text-5xl;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand/25 transition hover:-translate-y-0.5 hover:bg-brand-deep hover:shadow-xl hover:shadow-brand/30 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand/30;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand bg-gradient-to-b from-[#5B8B3B] to-[#3F6928] px-6 py-3.5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.28),0_12px_24px_-10px_rgba(53,90,30,0.65)] transition hover:-translate-y-0.5 hover:from-brand hover:to-brand-deep hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.28),0_18px_32px_-12px_rgba(53,90,30,0.7)] focus:outline-none focus-visible:ring-4 focus-visible:ring-brand/30;
+  }
+  /* Rich brand fill instead of flat green: logo-like two-tone gradient, a soft light
+     source top-left, depth bottom-right and a faint grain. */
+  .surface-brand {
+    background-color: #4a7a2e;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(120% 90% at 0% 0%, rgb(255 255 255 / 0.16), transparent 55%),
+      radial-gradient(90% 70% at 100% 100%, rgb(22 36 15 / 0.4), transparent 60%),
+      linear-gradient(135deg, #5c8d3c 0%, #4a7a2e 45%, #345a1d 100%);
+  }
+  .chip-brand {
+    @apply bg-gradient-to-br from-[#5F913E] to-brand-deep text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25)];
   }
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-ink/15 bg-white px-6 py-3.5 text-sm font-semibold text-brand-ink transition hover:-translate-y-0.5 hover:border-brand hover:text-brand focus:outline-none focus-visible:ring-4 focus-visible:ring-brand/20;

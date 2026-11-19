@@ -161,7 +161,7 @@ const Hero = () => {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="flex items-center gap-2.5 rounded-2xl bg-white/95 p-2 pr-3.5 shadow-xl backdrop-blur sm:gap-3 sm:p-3 sm:pr-5"
             >
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand text-white sm:h-10 sm:w-10 sm:rounded-xl">
+              <span className="grid h-8 w-8 place-items-center rounded-lg chip-brand sm:h-10 sm:w-10 sm:rounded-xl">
                 <ScanFace className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
               </span>
               <span className="text-xs leading-tight sm:text-sm">

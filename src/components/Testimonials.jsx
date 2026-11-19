@@ -30,7 +30,7 @@ const Testimonials = () => {
             >
               <figure
                 className={`flex h-full flex-col rounded-[1.75rem] p-6 sm:rounded-[2rem] sm:p-8 ${
-                  i === 1 ? "bg-brand text-white shadow-2xl shadow-brand/25 lg:-translate-y-4" : "bg-white shadow-sm ring-1 ring-brand-ink/5"
+                  i === 1 ? "surface-brand text-white shadow-2xl shadow-brand/25 lg:-translate-y-4" : "bg-white shadow-sm ring-1 ring-brand-ink/5"
                 }`}
               >
                 <Quote className={`h-8 w-8 ${i === 1 ? "text-white/40" : "text-brand/30"}`} aria-hidden="true" />

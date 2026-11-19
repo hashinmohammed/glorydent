@@ -41,7 +41,7 @@ const Spotlight = () => {
           <ul className="mt-8 space-y-3">
             {POINTS.map((p, i) => (
               <Reveal as="li" key={p} delay={0.1 + i * 0.08} className="flex items-start gap-3">
-                <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand">
+                <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full chip-brand">
                   <Check className="h-3.5 w-3.5" strokeWidth={3} />
                 </span>
                 <span className="text-white/85">{p}</span>

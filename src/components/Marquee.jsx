@@ -12,7 +12,7 @@ const ITEMS = [
 ];
 
 const Marquee = () => (
-  <div className="overflow-hidden border-y border-brand-deep bg-brand py-4 text-white sm:py-5" aria-hidden="true">
+  <div className="overflow-hidden border-y border-brand-deep surface-brand py-4 text-white sm:py-5" aria-hidden="true">
     <div className="flex w-max animate-marquee">
       {[...ITEMS, ...ITEMS].map((item, i) => (
         <span key={i} className="flex items-center whitespace-nowrap font-display text-lg italic sm:text-2xl">

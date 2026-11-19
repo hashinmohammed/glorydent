@@ -23,7 +23,7 @@ const Contact = () => (
       <Reveal className="overflow-hidden rounded-[1.75rem] bg-white sm:rounded-[2.5rem] shadow-[0_50px_100px_-50px_rgba(22,36,15,0.45)] ring-1 ring-brand-ink/5">
         <div className="grid lg:grid-cols-2 xl:grid-cols-[1fr_1.05fr_1.15fr]">
           {/* Call to action */}
-          <div className="relative flex flex-col overflow-hidden bg-brand p-6 text-white sm:p-10">
+          <div className="relative flex flex-col overflow-hidden surface-brand p-6 text-white sm:p-10">
             <svg
               aria-hidden="true"
               className="pointer-events-none absolute -bottom-28 -right-24 h-80 w-80 text-brand-deep"

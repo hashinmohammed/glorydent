@@ -37,7 +37,7 @@ const WhyUs = () => (
             className="absolute inset-0 bg-gradient-to-t from-brand-deep/50 via-brand-deep/5 via-40% to-transparent"
           />
         </div>
-        <div className="absolute -bottom-8 right-3 z-20 max-w-[200px] rounded-3xl bg-brand p-5 text-white shadow-2xl shadow-brand/30 sm:right-8 sm:max-w-[240px] sm:p-6">
+        <div className="absolute -bottom-8 right-3 z-20 max-w-[200px] rounded-3xl surface-brand p-5 text-white shadow-2xl shadow-brand/30 sm:right-8 sm:max-w-[240px] sm:p-6">
           <p className="font-display text-xl italic leading-snug sm:text-2xl">“Your smile is our pride.”</p>
           <p className="mt-2 text-xs uppercase tracking-[0.18em] text-white/70">The GloryDent promise</p>
         </div>

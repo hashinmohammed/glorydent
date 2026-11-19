@@ -57,7 +57,7 @@ const Specialities = () => {
                 >
                   <div className="flex flex-col p-6 sm:p-9">
                     <div className="flex items-center justify-between">
-                      <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand shadow-lg shadow-brand/40">
+                      <span className="grid h-12 w-12 place-items-center rounded-2xl chip-brand shadow-lg shadow-brand/40">
                         <Icon className="h-5 w-5" aria-hidden="true" />
                       </span>
                       <span className="font-display text-sm text-white/45">{number}</span>
@@ -101,7 +101,7 @@ const Specialities = () => {
 
           <m.aside
             {...tile(SPECIALITIES.length)}
-            className="swipe-item relative flex flex-col justify-between overflow-hidden rounded-[1.75rem] bg-brand p-6 text-white sm:rounded-[2rem] sm:p-8 md:col-span-2 lg:col-span-1"
+            className="swipe-item relative flex flex-col justify-between overflow-hidden rounded-[1.75rem] surface-brand p-6 text-white sm:rounded-[2rem] sm:p-8 md:col-span-2 lg:col-span-1"
           >
             <svg
               aria-hidden="true"
