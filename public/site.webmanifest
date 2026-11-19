@@ -1,10 +1,10 @@
 {
-  "name": "GloryDent Dentistry and Orthodontics",
+  "name": "GloryDent Multispeciality Dental Clinic",
   "short_name": "GloryDent",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFF9F6",
-  "theme_color": "#E31E24",
+  "background_color": "#F7FAF3",
+  "theme_color": "#4A7A2E",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },

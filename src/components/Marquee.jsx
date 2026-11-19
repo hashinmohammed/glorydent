@@ -1,14 +1,14 @@
 const ITEMS = [
-  "Check-ups & cleaning",
-  "Braces",
+  "Digital Smile Designing",
+  "Dental implants",
   "Clear aligners",
+  "Braces",
+  "Laser dental surgery",
   "Root canal therapy",
-  "Teeth whitening",
-  "Crowns & veneers",
-  "Implants",
   "Children's dentistry",
+  "Crowns & bridges",
+  "Gum care",
   "Wisdom teeth",
-  "Emergency care",
 ];
 
 const Marquee = () => (

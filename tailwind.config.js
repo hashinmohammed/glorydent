@@ -5,11 +5,12 @@ export default {
     extend: {
       colors: {
         brand: {
-          DEFAULT: "#E31E24",
-          deep: "#AD0E15",
-          ink: "#2B0709",
-          blush: "#FDEDEC",
-          cream: "#FFF9F6",
+          DEFAULT: "#4A7A2E",
+          deep: "#355A1E",
+          light: "#A3CC82",
+          ink: "#16240F",
+          blush: "#EDF4E7",
+          cream: "#F7FAF3",
         },
       },
       fontFamily: {

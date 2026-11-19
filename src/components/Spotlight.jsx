@@ -7,9 +7,9 @@ import mirrorImage from "../assets/smile2.webp";
 import { CLINIC } from "../data/site";
 
 const POINTS = [
-  "Traditional braces and clear aligners",
-  "Bite and alignment correction for teens and adults",
-  "Retainers and follow-up to keep results lasting",
+  "Clear aligners, ceramic braces and self-ligating brackets",
+  "No dietary restrictions with removable aligners",
+  "Corrective jaw alignment for children and adults",
 ];
 
 const Spotlight = () => {
@@ -28,13 +28,13 @@ const Spotlight = () => {
       <div className="container-x relative grid items-center gap-16 lg:grid-cols-2">
         <div>
           <Reveal>
-            <span className="eyebrow !text-white/70 before:!bg-white/40">Orthodontics</span>
+            <span className="eyebrow !text-white/70 before:!bg-white/40">Clear aligners &amp; orthodontics</span>
             <h2 className="h-section mt-5">
-              Straighter teeth, <em className="text-brand">bigger smiles.</em>
+              Straighter teeth, <em className="text-brand-light">bigger smiles.</em>
             </h2>
             <p className="mt-5 max-w-lg text-white/65">
-              Orthodontics is at the heart of what we do. Whether it&apos;s braces for your teenager or
-              discreet aligners for you, we plan every step around your face, your bite and your life.
+              Invisible, comfortable aligners and modern bracket systems that gently straighten teeth for
+              adults and teens, planned by our consultant orthodontist.
             </p>
           </Reveal>
 

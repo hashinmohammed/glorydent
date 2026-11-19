@@ -66,16 +66,16 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 transition hover:text-white"
           >
-            <MapPin className="h-3.5 w-3.5 text-brand" aria-hidden="true" />
-            {CLINIC.address}
+            <MapPin className="h-3.5 w-3.5 text-brand-light" aria-hidden="true" />
+            {CLINIC.shortAddress}
           </a>
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
-              <Clock className="h-3.5 w-3.5 text-brand" aria-hidden="true" />
-              {CLINIC.hours}
+              <Clock className="h-3.5 w-3.5 text-brand-light" aria-hidden="true" />
+              {CLINIC.hoursShort}
             </span>
             <a href={CLINIC.phoneHref} className="flex items-center gap-2 transition hover:text-white">
-              <Phone className="h-3.5 w-3.5 text-brand" aria-hidden="true" />
+              <Phone className="h-3.5 w-3.5 text-brand-light" aria-hidden="true" />
               {CLINIC.phoneDisplay}
             </a>
             <a
@@ -94,13 +94,13 @@ const Navbar = () => {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "border-b border-brand-ink/5 bg-white/85 shadow-[0_8px_30px_-12px_rgba(43,7,9,0.18)] backdrop-blur-xl"
+            ? "border-b border-brand-ink/5 bg-white/85 shadow-[0_8px_30px_-12px_rgba(22,36,15,0.18)] backdrop-blur-xl"
             : "bg-white"
         }`}
       >
         <div className="container-x flex h-[72px] items-center justify-between gap-6">
           <a href="#home" className="flex items-center gap-3" aria-label="GloryDent home">
-            <img src={logo} alt="" width="44" height="45" className="h-11 w-11 rounded-xl object-contain" />
+            <img src={logo} alt="" width="44" height="44" className="h-11 w-11 rounded-xl object-contain" />
             <span className="leading-tight">
               <span className="block font-display text-xl font-semibold tracking-tight">
                 Glory<span className="text-brand">Dent</span>
@@ -180,7 +180,7 @@ const Navbar = () => {
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
             >
               <div className="flex items-center justify-between">
-                <img src={logo} alt="GloryDent" width="48" height="49" className="h-12 w-12 object-contain" />
+                <img src={logo} alt="GloryDent" width="48" height="48" className="h-12 w-12 object-contain" />
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
@@ -223,7 +223,7 @@ const Navbar = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <Clock className="h-4 w-4 text-brand" aria-hidden="true" />
-                  {CLINIC.hours}
+                  {CLINIC.hoursShort}
                 </p>
               </div>
             </m.aside>
