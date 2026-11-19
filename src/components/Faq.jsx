@@ -19,9 +19,9 @@ const Faq = () => {
   const baseId = useId();
 
   return (
-    <section id="faq" className="bg-white py-20 sm:py-28">
+    <section id="faq" className="bg-white py-16 sm:py-28">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqSchema }} />
-      <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+      <div className="container-x grid gap-8 sm:gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
           <span className="eyebrow">Frequently asked questions</span>
           <h2 className="h-section mt-5">
@@ -51,10 +51,10 @@ const Faq = () => {
                       aria-expanded={isOpen}
                       aria-controls={panelId}
                       onClick={() => setOpen(isOpen ? -1 : i)}
-                      className="group flex w-full items-start justify-between gap-6 py-6 text-left focus:outline-none focus-visible:ring-4 focus-visible:ring-brand/20"
+                      className="group flex w-full items-start justify-between gap-4 py-5 text-left sm:gap-6 sm:py-6 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand/20"
                     >
                       <span
-                        className={`font-display text-lg leading-snug transition sm:text-xl ${
+                        className={`font-display text-[1.05rem] leading-snug transition sm:text-xl ${
                           isOpen ? "text-brand" : "group-hover:text-brand"
                         }`}
                       >
@@ -79,7 +79,7 @@ const Faq = () => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="max-w-2xl pb-6 pr-12 leading-relaxed text-brand-ink/70">{f.a}</p>
+                      <p className="max-w-2xl pb-5 text-[15px] leading-relaxed text-brand-ink/70 sm:pb-6 sm:pr-12 sm:text-base">{f.a}</p>
                     </div>
                   </div>
                 </li>

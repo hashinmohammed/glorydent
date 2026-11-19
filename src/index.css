@@ -19,14 +19,14 @@
 
 @layer components {
   .container-x {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
   }
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand;
+    @apply inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand sm:text-xs sm:tracking-[0.2em];
   }
   .eyebrow::before {
     content: "";
-    @apply h-px w-8 bg-brand;
+    @apply h-px w-6 shrink-0 bg-brand sm:w-8;
   }
   .h-section {
     @apply font-display text-3xl font-medium leading-[1.08] tracking-tight sm:text-4xl lg:text-5xl;
@@ -36,6 +36,28 @@
   }
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-ink/15 bg-white px-6 py-3.5 text-sm font-semibold text-brand-ink transition hover:-translate-y-0.5 hover:border-brand hover:text-brand focus:outline-none focus-visible:ring-4 focus-visible:ring-brand/20;
+  }
+}
+
+/* Phones: card lists become a horizontal swipe row (plain CSS so it outranks the grid utilities). */
+@media (max-width: 639px) {
+  .swipe-row {
+    display: flex;
+    gap: 0.875rem;
+    margin-inline: -1.25rem;
+    padding: 0.25rem 1.25rem 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.25rem;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .swipe-row::-webkit-scrollbar {
+    display: none;
+  }
+  .swipe-item {
+    flex: 0 0 84%;
+    scroll-snap-align: start;
   }
 }
 

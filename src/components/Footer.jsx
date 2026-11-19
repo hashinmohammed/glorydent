@@ -2,10 +2,10 @@ import logo from "../assets/logo.webp";
 import { CLINIC, NAV_LINKS } from "../data/site";
 
 const Footer = () => (
-  <footer className="bg-brand-ink pb-28 pt-16 text-white/70 sm:pb-10">
+  <footer className="bg-brand-ink pb-28 pt-12 text-white/70 sm:pb-10 sm:pt-16">
     <div className="container-x">
-      <div className="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-[1.4fr_1fr_1fr]">
-        <div>
+      <div className="grid grid-cols-2 gap-x-6 gap-y-10 border-b border-white/10 pb-10 sm:grid-cols-1 sm:gap-10 sm:pb-12 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="col-span-2 sm:col-span-1">
           <a href="#home" className="inline-flex items-center gap-3">
             <img src={logo} alt="" width="48" height="48" loading="lazy" className="h-12 w-12 rounded-xl bg-white object-contain p-1" />
             <span className="font-display text-2xl text-white">

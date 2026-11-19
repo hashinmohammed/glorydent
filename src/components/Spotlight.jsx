@@ -19,13 +19,13 @@ const Spotlight = () => {
   const yFront = useTransform(scrollYProgress, [0, 1], [-30, 50]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-brand-ink py-20 text-white sm:py-28">
+    <section ref={ref} className="relative overflow-hidden bg-brand-ink py-16 text-white sm:py-28">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-brand/25 blur-[120px]"
       />
 
-      <div className="container-x relative grid items-center gap-16 lg:grid-cols-2">
+      <div className="container-x relative grid items-center gap-12 sm:gap-16 lg:grid-cols-2">
         <div>
           <Reveal>
             <span className="eyebrow !text-white/70 before:!bg-white/40">Clear aligners &amp; orthodontics</span>
@@ -61,7 +61,7 @@ const Spotlight = () => {
           </Reveal>
         </div>
 
-        <div className="relative mx-auto h-[420px] w-full max-w-[520px] sm:h-[520px]">
+        <div className="relative mx-auto h-[330px] w-full max-w-[520px] sm:h-[520px]">
           <m.img
             style={{ y: yBack }}
             src={mirrorImage}

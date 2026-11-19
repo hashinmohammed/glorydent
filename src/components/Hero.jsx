@@ -37,7 +37,7 @@ const Hero = () => {
         className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-brand/10 blur-3xl"
       />
 
-      <div className="container-x relative grid items-center gap-14 pb-20 pt-12 sm:pt-16 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pb-28 lg:pt-20">
+      <div className="container-x relative grid items-center gap-12 pb-16 pt-9 sm:gap-14 sm:pb-20 sm:pt-16 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pb-28 lg:pt-20">
         <div>
           <m.span {...rise(0.05)} className="eyebrow">
             {CLINIC.slogan}
@@ -45,7 +45,7 @@ const Hero = () => {
 
           <m.h1
             {...rise(0.15)}
-            className="mt-6 font-display text-[2.6rem] font-medium leading-[1.02] tracking-tight sm:text-6xl lg:text-[4.4rem]"
+            className="mt-5 font-display text-[2.55rem] font-medium leading-[1.04] tracking-tight sm:mt-6 sm:text-6xl sm:leading-[1.02] lg:text-[4.4rem]"
           >
             Where your smile{" "}
             <span className="relative inline-block italic text-brand">
@@ -70,12 +70,12 @@ const Hero = () => {
             </span>
           </m.h1>
 
-          <m.p {...rise(0.3)} className="mt-8 max-w-xl text-lg leading-relaxed text-brand-ink/70">
+          <m.p {...rise(0.3)} className="mt-7 max-w-xl text-base leading-relaxed text-brand-ink/70 sm:mt-8 sm:text-lg">
             Comprehensive, gentle and modern dental care for the entire family, from a
             multi-specialist team in Karinkallathani.
           </m.p>
 
-          <m.div {...rise(0.42)} className="mt-9 grid gap-3 sm:flex sm:flex-wrap sm:items-center">
+          <m.div {...rise(0.42)} className="mt-8 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap sm:items-center">
             <a href={CLINIC.phoneHref} className="btn-primary">
               <Phone className="h-4 w-4" aria-hidden="true" />
               Book an Appointment
@@ -91,33 +91,33 @@ const Hero = () => {
 
           <m.ul
             {...rise(0.55)}
-            className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-brand-ink/60"
+            className="mt-6 flex flex-wrap items-center gap-2 text-[13px] text-brand-ink/65 sm:mt-7 sm:gap-x-4 sm:gap-y-2 sm:text-sm sm:text-brand-ink/60"
           >
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 max-sm:rounded-full max-sm:bg-white max-sm:px-3 max-sm:py-1.5 max-sm:shadow-sm max-sm:ring-1 max-sm:ring-brand-ink/5">
               <Clock className="h-4 w-4 text-brand" aria-hidden="true" />
               {CLINIC.hoursShort}
             </li>
-            <li aria-hidden="true" className="h-1 w-1 rounded-full bg-brand-ink/25" />
-            <li className="flex items-center gap-2">
+            <li aria-hidden="true" className="hidden h-1 w-1 rounded-full bg-brand-ink/25 sm:block" />
+            <li className="flex items-center gap-2 max-sm:rounded-full max-sm:bg-white max-sm:px-3 max-sm:py-1.5 max-sm:shadow-sm max-sm:ring-1 max-sm:ring-brand-ink/5">
               <MapPin className="h-4 w-4 text-brand" aria-hidden="true" />
               {CLINIC.shortAddress}
             </li>
           </m.ul>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[520px]">
+        <div className="relative mx-auto w-[84%] max-w-[520px] sm:w-full">
           <m.div
             aria-hidden="true"
             initial={{ opacity: 0, x: -12, y: 12 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 1.2, delay: 0.5, ease }}
-            className="absolute -left-4 top-4 bottom-[-1rem] right-4 rounded-t-[999px] rounded-b-[2.75rem] border-2 border-brand/30 sm:-left-5 sm:top-5"
+            className="absolute -left-3 top-3 bottom-[-0.75rem] right-3 rounded-t-[999px] rounded-b-[2.25rem] border-2 border-brand/30 sm:-left-5 sm:top-5 sm:bottom-[-1rem] sm:right-4 sm:rounded-b-[2.75rem]"
           />
           <m.div
             initial={{ scale: 0.94, y: 40 }}
             animate={{ scale: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.2, ease }}
-            className="relative aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-[2.5rem] bg-brand-blush shadow-[0_40px_80px_-30px_rgba(53,90,30,0.45)]"
+            className="relative aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-[2rem] bg-brand-blush sm:rounded-b-[2.5rem] shadow-[0_40px_80px_-30px_rgba(53,90,30,0.45)]"
           >
             <img
               src={heroImage}
@@ -138,7 +138,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.7, ease }}
-            className="absolute -bottom-6 -left-4 h-32 w-32 overflow-hidden rounded-full border-[6px] border-brand-cream shadow-xl sm:-left-10 sm:h-40 sm:w-40"
+            className="absolute -bottom-5 -left-8 h-24 w-24 overflow-hidden rounded-full border-4 border-brand-cream shadow-xl sm:-bottom-6 sm:-left-10 sm:h-40 sm:w-40 sm:border-[6px]"
           >
             <img
               src={familyImage}
@@ -154,17 +154,17 @@ const Hero = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.9, ease }}
-            className="absolute -right-2 top-10 sm:-right-8"
+            className="absolute -right-8 top-8 sm:-right-8 sm:top-10"
           >
             <m.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="flex items-center gap-3 rounded-2xl bg-white/95 p-3 pr-5 shadow-xl backdrop-blur"
+              className="flex items-center gap-2.5 rounded-2xl bg-white/95 p-2 pr-3.5 shadow-xl backdrop-blur sm:gap-3 sm:p-3 sm:pr-5"
             >
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand text-white">
-                <ScanFace className="h-5 w-5" aria-hidden="true" />
+              <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand text-white sm:h-10 sm:w-10 sm:rounded-xl">
+                <ScanFace className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
               </span>
-              <span className="text-sm leading-tight">
+              <span className="text-xs leading-tight sm:text-sm">
                 <span className="block font-semibold">Digital Smile Designing</span>
                 <span className="text-brand-ink/55">Preview your new smile</span>
               </span>
@@ -175,17 +175,17 @@ const Hero = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 1.1, ease }}
-            className="absolute -right-2 bottom-16 sm:-right-6"
+            className="absolute -right-8 bottom-12 sm:-right-6 sm:bottom-16"
           >
             <m.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="flex items-center gap-3 rounded-2xl bg-brand-ink p-3 pr-5 text-white shadow-xl"
+              className="flex items-center gap-2.5 rounded-2xl bg-brand-ink p-2 pr-3.5 text-white shadow-xl sm:gap-3 sm:p-3 sm:pr-5"
             >
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-brand-light">
-                <ShieldCheck className="h-5 w-5" aria-hidden="true" />
+              <span className="grid h-8 w-8 place-items-center rounded-lg bg-white/10 text-brand-light sm:h-10 sm:w-10 sm:rounded-xl">
+                <ShieldCheck className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
               </span>
-              <span className="text-sm leading-tight">
+              <span className="text-xs leading-tight sm:text-sm">
                 <span className="block font-semibold">Hospital-grade sterilisation</span>
                 <span className="text-white/60">Autoclaved, every time</span>
               </span>

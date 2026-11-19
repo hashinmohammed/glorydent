@@ -98,14 +98,14 @@ const Navbar = () => {
             : "bg-white"
         }`}
       >
-        <div className="container-x flex h-[72px] items-center justify-between gap-6">
+        <div className="container-x flex h-16 items-center justify-between gap-4 sm:h-[72px] sm:gap-6">
           <a href="#home" className="flex items-center gap-3" aria-label="GloryDent home">
-            <img src={logo} alt="" width="44" height="44" className="h-11 w-11 rounded-xl object-contain" />
+            <img src={logo} alt="" width="44" height="44" className="h-10 w-10 rounded-xl object-contain sm:h-11 sm:w-11" />
             <span className="leading-tight">
-              <span className="block font-display text-xl font-semibold tracking-tight">
+              <span className="block font-display text-lg font-semibold tracking-tight sm:text-xl">
                 Glory<span className="text-brand">Dent</span>
               </span>
-              <span className="block text-[11px] font-medium uppercase tracking-[0.18em] text-brand-ink/55">
+              <span className="block text-[9.5px] font-medium uppercase tracking-[0.14em] text-brand-ink/55 sm:text-[11px] sm:tracking-[0.18em]">
                 {CLINIC.tagline}
               </span>
             </span>
@@ -143,7 +143,7 @@ const Navbar = () => {
               ref={menuButtonRef}
               type="button"
               onClick={() => setOpen(true)}
-              className="grid h-11 w-11 place-items-center rounded-full border border-brand-ink/10 text-brand-ink transition hover:border-brand hover:text-brand lg:hidden"
+              className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-brand-ink/10 text-brand-ink transition hover:border-brand hover:text-brand sm:h-11 sm:w-11 lg:hidden"
               aria-label="Open menu"
               aria-expanded={open}
               aria-controls="mobile-menu"

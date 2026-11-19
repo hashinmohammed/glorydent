@@ -6,8 +6,8 @@ import { CLINIC } from "../data/site";
 const SESSION_LABELS = ["Morning", "Evening"];
 
 const DetailRow = ({ icon: Icon, title, children }) => (
-  <div className="flex gap-4 py-6 first:pt-0 last:pb-0">
-    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-blush text-brand">
+  <div className="flex gap-3.5 py-5 first:pt-0 last:pb-0 sm:gap-4 sm:py-6">
+    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-blush text-brand sm:h-11 sm:w-11 sm:rounded-2xl">
       <Icon className="h-5 w-5" aria-hidden="true" />
     </span>
     <div className="min-w-0 flex-1">
@@ -18,12 +18,12 @@ const DetailRow = ({ icon: Icon, title, children }) => (
 );
 
 const Contact = () => (
-  <section id="contact" className="bg-brand-cream py-20 sm:py-28">
+  <section id="contact" className="bg-brand-cream py-16 sm:py-28">
     <div className="container-x">
-      <Reveal className="overflow-hidden rounded-[2.5rem] bg-white shadow-[0_50px_100px_-50px_rgba(22,36,15,0.45)] ring-1 ring-brand-ink/5">
+      <Reveal className="overflow-hidden rounded-[1.75rem] bg-white sm:rounded-[2.5rem] shadow-[0_50px_100px_-50px_rgba(22,36,15,0.45)] ring-1 ring-brand-ink/5">
         <div className="grid lg:grid-cols-2 xl:grid-cols-[1fr_1.05fr_1.15fr]">
           {/* Call to action */}
-          <div className="relative flex flex-col overflow-hidden bg-brand p-8 text-white sm:p-10">
+          <div className="relative flex flex-col overflow-hidden bg-brand p-6 text-white sm:p-10">
             <svg
               aria-hidden="true"
               className="pointer-events-none absolute -bottom-28 -right-24 h-80 w-80 text-brand-deep"
@@ -35,16 +35,16 @@ const Contact = () => (
 
             <div className="relative">
               <span className="eyebrow !text-white/80 before:!bg-white/50">Book an appointment</span>
-              <h2 className="mt-5 font-display text-3xl font-medium leading-[1.1] sm:text-4xl">
+              <h2 className="mt-4 font-display text-[1.75rem] font-medium leading-[1.1] sm:mt-5 sm:text-4xl">
                 Ready when your smile is.
               </h2>
-              <p className="mt-4 text-white/80">
+              <p className="mt-3 text-[15px] text-white/80 sm:mt-4 sm:text-base">
                 Call, WhatsApp or walk in. If your preferred time isn&apos;t free, we&apos;ll suggest the closest one
                 that is.
               </p>
             </div>
 
-            <div className="relative mt-8 flex flex-col gap-3 lg:mt-auto lg:pt-10">
+            <div className="relative mt-6 flex flex-col gap-2.5 sm:mt-8 sm:gap-3 lg:mt-auto lg:pt-10">
               <a
                 href={CLINIC.phoneHref}
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-brand shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
@@ -65,7 +65,7 @@ const Contact = () => (
           </div>
 
           {/* Details */}
-          <div className="divide-y divide-brand-ink/10 p-8 sm:p-10">
+          <div className="divide-y divide-brand-ink/10 p-6 sm:p-10">
             <DetailRow icon={Phone} title="Phone">
               <ul className="space-y-1">
                 {CLINIC.phones.map((p) => (
@@ -120,7 +120,7 @@ const Contact = () => (
           </div>
 
           {/* Map */}
-          <div className="relative min-h-[320px] bg-brand-blush lg:col-span-2 lg:min-h-[380px] xl:col-span-1 xl:min-h-full">
+          <div className="relative min-h-[260px] bg-brand-blush sm:min-h-[320px] lg:col-span-2 lg:min-h-[380px] xl:col-span-1 xl:min-h-full">
             <iframe
               title="GloryDent on Google Maps"
               src={CLINIC.mapsEmbed}
